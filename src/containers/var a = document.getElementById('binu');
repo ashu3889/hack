@@ -1,0 +1,65 @@
+var a = document.getElementById('binu');
+
+var open = document.getElementsByTagName("cq-hu-open")[0].textContent;
+var close = document.getElementsByTagName("cq-hu-close")[0].textContent;
+var low = document.getElementsByTagName("cq-hu-low")[0].textContent;
+var high = document.getElementsByTagName("cq-hu-high")[0].textContent;
+
+
+
+
+document.getElementById('chart-iframe').style.pointerEvents = "none";
+
+var ashutosh = [];
+
+var frame = document.getElementsByClassName('chart-frame');
+
+
+
+
+
+var ashutosh = [];
+document.addEventListener('mousemove', function (event) {
+
+
+if(document.getElementsByTagName("cq-hu-open") !== undefined && document.getElementsByTagName("cq-hu-close")!== undefined && document.getElementsByTagName("cq-hu-low") !== undefined && document.getElementsByTagName("cq-hu-high") !== undefined ){
+
+
+
+if(document.getElementsByTagName("cq-hu-open").length == 1 && document.getElementsByTagName("cq-hu-close").length == 1 && document.getElementsByTagName("cq-hu-high").length == 1 && document.getElementsByTagName("cq-hu-low").length == 1){
+
+
+var open = document.getElementsByTagName("cq-hu-open")[0].innerText;
+var close = document.getElementsByTagName("cq-hu-close")[0].innerText;
+var low = document.getElementsByTagName("cq-hu-low")[0].innerText;
+var high = document.getElementsByTagName("cq-hu-high")[0].innerText;
+var time = document.getElementsByTagName("cq-hu-date")[0].innerText;
+
+var arr = {
+	"open" : open,
+	"close" : close,
+	"low" : low,
+	"high" : high,
+	 "time" : time,
+};
+
+//console.log(arr);
+
+ashutosh.push(arr);
+
+
+
+
+
+console.log('ashutosh');
+console.log(ashutosh);
+
+	
+}
+
+	
+}
+  
+
+
+  });

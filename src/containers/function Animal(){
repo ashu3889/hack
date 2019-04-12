@@ -1,0 +1,35 @@
+function Animal(){
+	sleep : function(){
+	   console.log('this.name' is sleeping)
+	}
+	eating : function(){
+	   console.log('this.name' is eating)
+	}
+};
+
+var gorilla = {
+	name : 'george gorila'
+}
+Animal.call(gorilla)
+
+
+
+function ashu(){
+	this.name = 'ashu';
+	this.age = 10;
+}
+
+ashu.prototype.speek = function(){
+     
+	console.log(`${this.class} is speeking`);
+
+}
+
+function bonu(){
+	this.class = '10';
+	this.profession = 'doctor';
+}
+
+bonu.prototype = Object.create(ashu.prototype);
+bonu.prototype.constructor = bonu;
+

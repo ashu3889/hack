@@ -1,0 +1,646 @@
+sideways formed at 2017-09-29
+plotdata.js:390 sideways high is 554.9000
+plotdata.js:391 sideways low at 435.1000
+plotdata.js:392 sideways formed from date2017-08-08 to 2017-08-23
+plotdata.js:791 down buy initiated at 2018-02-07 price is405.2000 for CADILAHC
+yearly_bpb.js:2776 down buy crude at 2018-02-07
+yearly_bpb.js:696 exit IMMEDIATELY at 1405.200040
+plotdata.js:389 sideways formed at 2018-04-23
+plotdata.js:390 sideways high is 434.0500
+plotdata.js:391 sideways low at 375.7500
+plotdata.js:392 sideways formed from date2018-02-14 to 2018-03-08
+plotdata.js:791 down buy initiated at 2018-07-23 price is372.4500 for CADILAHC
+xhr.js:126 Refused to set unsafe header "User-Agent"
+setRequestHeader @ xhr.js:126
+forEach @ utils.js:224
+dispatchXhrRequest @ xhr.js:120
+xhrAdapter @ xhr.js:12
+dispatchRequest @ dispatchRequest.js:59
+Promise.then (async)
+request @ Axios.js:51
+wrap @ bind.js:9
+request @ connect.js:1162
+_post @ connect.js:1105
+KiteConnect.self.placeOrder @ connect.js:531
+startTrade @ yearly_bpb.js:2858
+componentWillReceiveProps @ yearly_bpb.js:2776
+callComponentWillReceiveProps @ react-dom.development.js:11528
+updateClassInstance @ react-dom.development.js:11720
+updateClassComponent @ react-dom.development.js:13154
+beginWork @ react-dom.development.js:13825
+performUnitOfWork @ react-dom.development.js:15864
+workLoop @ react-dom.development.js:15903
+renderRoot @ react-dom.development.js:15943
+performWorkOnRoot @ react-dom.development.js:16561
+performWork @ react-dom.development.js:16483
+performSyncWork @ react-dom.development.js:16455
+requestWork @ react-dom.development.js:16355
+scheduleWork$1 @ react-dom.development.js:16219
+enqueueSetState @ react-dom.development.js:11300
+./node_modules/react/cjs/react.development.js.Component.setState @ react.development.js:270
+onStateChange @ connectAdvanced.js:205
+dispatch @ createStore.js:173
+e @ VM949:1
+(anonymous) @ index.js:11
+(anonymous) @ bindActionCreators.js:3
+(anonymous) @ yearly_bpb.js:924
+populatingCrudeTickdata @ yearly_bpb.js:308
+startAwesomeFunction @ yearly_bpb.js:280
+(anonymous) @ yearly_bpb.js:2109
+setTimeout (async)
+componentWillReceiveProps @ yearly_bpb.js:2109
+callComponentWillReceiveProps @ react-dom.development.js:11528
+updateClassInstance @ react-dom.development.js:11720
+updateClassComponent @ react-dom.development.js:13154
+beginWork @ react-dom.development.js:13825
+performUnitOfWork @ react-dom.development.js:15864
+workLoop @ react-dom.development.js:15903
+renderRoot @ react-dom.development.js:15943
+performWorkOnRoot @ react-dom.development.js:16561
+performWork @ react-dom.development.js:16483
+performSyncWork @ react-dom.development.js:16455
+requestWork @ react-dom.development.js:16355
+scheduleWork$1 @ react-dom.development.js:16219
+enqueueSetState @ react-dom.development.js:11300
+./node_modules/react/cjs/react.development.js.Component.setState @ react.development.js:270
+onStateChange @ connectAdvanced.js:205
+dispatch @ createStore.js:173
+e @ VM949:1
+(anonymous) @ index.js:11
+dispatch @ applyMiddleware.js:35
+(anonymous) @ action.js:21
+Promise.then (async)
+(anonymous) @ action.js:13
+(anonymous) @ index.js:8
+(anonymous) @ bindActionCreators.js:3
+(anonymous) @ yearly_bpb.js:258
+setTimeout (async)
+(anonymous) @ yearly_bpb.js:253
+setInterval (async)
+processData @ yearly_bpb.js:178
+startfetchingYearlydata @ yearly_bpb.js:3641
+onClick @ yearly_bpb.js:3698
+callCallback @ react-dom.development.js:100
+invokeGuardedCallbackDev @ react-dom.development.js:138
+invokeGuardedCallback @ react-dom.development.js:187
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:201
+executeDispatch @ react-dom.development.js:461
+executeDispatchesInOrder @ react-dom.development.js:483
+executeDispatchesAndRelease @ react-dom.development.js:581
+executeDispatchesAndReleaseTopLevel @ react-dom.development.js:592
+forEachAccumulated @ react-dom.development.js:562
+runEventsInBatch @ react-dom.development.js:723
+runExtractedEventsInBatch @ react-dom.development.js:732
+handleTopLevel @ react-dom.development.js:4477
+batchedUpdates$1 @ react-dom.development.js:16660
+batchedUpdates @ react-dom.development.js:2131
+dispatchEvent @ react-dom.development.js:4556
+interactiveUpdates$1 @ react-dom.development.js:16715
+interactiveUpdates @ react-dom.development.js:2150
+dispatchInteractiveEvent @ react-dom.development.js:4533
+btest:1 Access to XMLHttpRequest at 'https://api.kite.trade/orders/bo' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+plotdata.js:389 sideways formed at 2017-09-29
+plotdata.js:390 sideways high is 554.9000
+plotdata.js:391 sideways low at 435.1000
+plotdata.js:392 sideways formed from date2017-08-08 to 2017-08-23
+plotdata.js:791 down buy initiated at 2018-02-07 price is405.2000 for CADILAHC
+plotdata.js:389 sideways formed at 2018-04-23
+plotdata.js:390 sideways high is 434.0500
+plotdata.js:391 sideways low at 375.7500
+plotdata.js:392 sideways formed from date2018-02-14 to 2018-03-08
+plotdata.js:791 down buy initiated at 2018-07-23 price is372.4500 for CADILAHC
+plotdata.js:389 sideways formed at 2017-09-29
+plotdata.js:390 sideways high is 554.9000
+plotdata.js:391 sideways low at 435.1000
+plotdata.js:392 sideways formed from date2017-08-08 to 2017-08-23
+plotdata.js:791 down buy initiated at 2018-02-07 price is405.2000 for CADILAHC
+plotdata.js:389 sideways formed at 2018-04-23
+plotdata.js:390 sideways high is 434.0500
+plotdata.js:391 sideways low at 375.7500
+plotdata.js:392 sideways formed from date2018-02-14 to 2018-03-08
+plotdata.js:791 down buy initiated at 2018-07-23 price is372.4500 for CADILAHC
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-11-05
+plotdata.js:390 sideways high is 129.2500
+plotdata.js:391 sideways low at 105.4000
+plotdata.js:392 sideways formed from date2018-01-15 to 2018-02-07
+plotdata.js:630 up black extreme is2018-11-26
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-11-05
+plotdata.js:390 sideways high is 129.2500
+plotdata.js:391 sideways low at 105.4000
+plotdata.js:392 sideways formed from date2018-01-15 to 2018-02-07
+plotdata.js:630 up black extreme is2018-11-26
+plotdata.js:389 sideways formed at 2018-11-05
+plotdata.js:390 sideways high is 129.2500
+plotdata.js:391 sideways low at 105.4000
+plotdata.js:392 sideways formed from date2018-01-15 to 2018-02-07
+plotdata.js:630 up black extreme is2018-11-26
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-01-23
+plotdata.js:390 sideways high is 260.9500
+plotdata.js:391 sideways low at 235.0000
+plotdata.js:392 sideways formed from date2017-11-10 to 2017-11-14
+plotdata.js:630 up black extreme is2018-02-15
+plotdata.js:601 time to empty the sideways on2018-03-06
+plotdata.js:389 sideways formed at 2018-04-30
+plotdata.js:390 sideways high is 287.0000
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-02-21 to 2018-03-06
+plotdata.js:630 up black extreme is2018-06-04
+plotdata.js:601 time to empty the sideways on2018-06-08
+plotdata.js:389 sideways formed at 2018-07-19
+plotdata.js:390 sideways high is 382.0000
+plotdata.js:391 sideways low at 297.6000
+plotdata.js:392 sideways formed from date2018-06-08 to 2018-06-22
+plotdata.js:791 down buy initiated at 2019-01-23 price is223.2000 for GRUH
+plotdata.js:389 sideways formed at 2018-01-23
+plotdata.js:390 sideways high is 260.9500
+plotdata.js:391 sideways low at 235.0000
+plotdata.js:392 sideways formed from date2017-11-10 to 2017-11-14
+plotdata.js:630 up black extreme is2018-02-15
+plotdata.js:601 time to empty the sideways on2018-03-06
+plotdata.js:389 sideways formed at 2018-04-30
+plotdata.js:390 sideways high is 287.0000
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-02-21 to 2018-03-06
+plotdata.js:630 up black extreme is2018-06-04
+plotdata.js:601 time to empty the sideways on2018-06-08
+plotdata.js:389 sideways formed at 2018-07-19
+plotdata.js:390 sideways high is 382.0000
+plotdata.js:391 sideways low at 297.6000
+plotdata.js:392 sideways formed from date2018-06-08 to 2018-06-22
+plotdata.js:791 down buy initiated at 2019-01-23 price is223.2000 for GRUH
+plotdata.js:389 sideways formed at 2018-01-23
+plotdata.js:390 sideways high is 260.9500
+plotdata.js:391 sideways low at 235.0000
+plotdata.js:392 sideways formed from date2017-11-10 to 2017-11-14
+plotdata.js:630 up black extreme is2018-02-15
+plotdata.js:601 time to empty the sideways on2018-03-06
+plotdata.js:389 sideways formed at 2018-04-30
+plotdata.js:390 sideways high is 287.0000
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-02-21 to 2018-03-06
+plotdata.js:630 up black extreme is2018-06-04
+plotdata.js:601 time to empty the sideways on2018-06-08
+plotdata.js:389 sideways formed at 2018-07-19
+plotdata.js:390 sideways high is 382.0000
+plotdata.js:391 sideways low at 297.6000
+plotdata.js:392 sideways formed from date2018-06-08 to 2018-06-22
+plotdata.js:791 down buy initiated at 2019-01-23 price is223.2000 for GRUH
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-01-02
+plotdata.js:390 sideways high is 1300.0000
+plotdata.js:391 sideways low at 1121.8000
+plotdata.js:392 sideways formed from date2017-10-19 to 2017-11-08
+plotdata.js:791 down buy initiated at 2018-05-28 price is1057.8000 for GRASIM
+plotdata.js:389 sideways formed at 2018-01-02
+plotdata.js:390 sideways high is 1300.0000
+plotdata.js:391 sideways low at 1121.8000
+plotdata.js:392 sideways formed from date2017-10-19 to 2017-11-08
+plotdata.js:791 down buy initiated at 2018-05-28 price is1057.8000 for GRASIM
+plotdata.js:389 sideways formed at 2018-01-02
+plotdata.js:390 sideways high is 1300.0000
+plotdata.js:391 sideways low at 1121.8000
+plotdata.js:392 sideways formed from date2017-10-19 to 2017-11-08
+plotdata.js:791 down buy initiated at 2018-05-28 price is1057.8000 for GRASIM
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-03-19
+plotdata.js:390 sideways high is 139.8000
+plotdata.js:391 sideways low at 124.0000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-15
+plotdata.js:630 up black extreme is2019-01-03
+plotdata.js:389 sideways formed at 2018-03-19
+plotdata.js:390 sideways high is 139.8000
+plotdata.js:391 sideways low at 124.0000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-15
+plotdata.js:630 up black extreme is2019-01-03
+plotdata.js:389 sideways formed at 2018-03-19
+plotdata.js:390 sideways high is 139.8000
+plotdata.js:391 sideways low at 124.0000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-15
+plotdata.js:630 up black extreme is2019-01-03
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-09-26
+plotdata.js:390 sideways high is 954.0500
+plotdata.js:391 sideways low at 871.0500
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-08-29
+plotdata.js:791 down buy initiated at 2018-06-07 price is690.9000 for CUMMINSIND
+plotdata.js:389 sideways formed at 2018-08-03
+plotdata.js:390 sideways high is 698.3500
+plotdata.js:391 sideways low at 632.9500
+plotdata.js:392 sideways formed from date2018-06-18 to 2018-07-02
+plotdata.js:630 up black extreme is2018-08-07
+plotdata.js:601 time to empty the sideways on2018-09-03
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at39
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at43
+plotdata.js:389 sideways formed at 2019-02-06
+plotdata.js:390 sideways high is 866.9000
+plotdata.js:391 sideways low at 777.5000
+plotdata.js:392 sideways formed from date2018-12-26 to 2019-01-01
+plotdata.js:389 sideways formed at 2017-09-26
+plotdata.js:390 sideways high is 954.0500
+plotdata.js:391 sideways low at 871.0500
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-08-29
+plotdata.js:791 down buy initiated at 2018-06-07 price is690.9000 for CUMMINSIND
+plotdata.js:389 sideways formed at 2018-08-03
+plotdata.js:390 sideways high is 698.3500
+plotdata.js:391 sideways low at 632.9500
+plotdata.js:392 sideways formed from date2018-06-18 to 2018-07-02
+plotdata.js:630 up black extreme is2018-08-07
+plotdata.js:601 time to empty the sideways on2018-09-03
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at39
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at43
+plotdata.js:389 sideways formed at 2019-02-06
+plotdata.js:390 sideways high is 866.9000
+plotdata.js:391 sideways low at 777.5000
+plotdata.js:392 sideways formed from date2018-12-26 to 2019-01-01
+plotdata.js:389 sideways formed at 2017-09-26
+plotdata.js:390 sideways high is 954.0500
+plotdata.js:391 sideways low at 871.0500
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-08-29
+plotdata.js:791 down buy initiated at 2018-06-07 price is690.9000 for CUMMINSIND
+plotdata.js:389 sideways formed at 2018-08-03
+plotdata.js:390 sideways high is 698.3500
+plotdata.js:391 sideways low at 632.9500
+plotdata.js:392 sideways formed from date2018-06-18 to 2018-07-02
+plotdata.js:630 up black extreme is2018-08-07
+plotdata.js:601 time to empty the sideways on2018-09-03
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at39
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at43
+plotdata.js:389 sideways formed at 2019-02-06
+plotdata.js:390 sideways high is 866.9000
+plotdata.js:391 sideways low at 777.5000
+plotdata.js:392 sideways formed from date2018-12-26 to 2019-01-01
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-04-13
+plotdata.js:390 sideways high is 417.0000
+plotdata.js:391 sideways low at 355.2500
+plotdata.js:392 sideways formed from date2018-03-01 to 2018-03-20
+plotdata.js:389 sideways formed at 2018-04-13
+plotdata.js:390 sideways high is 417.0000
+plotdata.js:391 sideways low at 355.2500
+plotdata.js:392 sideways formed from date2018-03-01 to 2018-03-20
+plotdata.js:389 sideways formed at 2018-04-13
+plotdata.js:390 sideways high is 417.0000
+plotdata.js:391 sideways low at 355.2500
+plotdata.js:392 sideways formed from date2018-03-01 to 2018-03-20
+yearly_bpb.js:240 inside setinterval
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at7
+plotdata.js:389 sideways formed at 2017-11-13
+plotdata.js:390 sideways high is 565.2000
+plotdata.js:391 sideways low at 484.4600
+plotdata.js:392 sideways formed from date2017-08-29 to 2017-09-13
+plotdata.js:630 up black extreme is2018-01-23
+plotdata.js:791 down buy initiated at 2019-02-28 price is478.1500 for CONCOR
+yearly_bpb.js:240 inside setinterval
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at7
+plotdata.js:389 sideways formed at 2017-11-13
+plotdata.js:390 sideways high is 565.2000
+plotdata.js:391 sideways low at 484.4600
+plotdata.js:392 sideways formed from date2017-08-29 to 2017-09-13
+plotdata.js:630 up black extreme is2018-01-23
+plotdata.js:791 down buy initiated at 2019-02-28 price is478.1500 for BHARATFORG
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at7
+plotdata.js:389 sideways formed at 2017-11-13
+plotdata.js:390 sideways high is 565.2000
+plotdata.js:391 sideways low at 484.4600
+plotdata.js:392 sideways formed from date2017-08-29 to 2017-09-13
+plotdata.js:630 up black extreme is2018-01-23
+plotdata.js:791 down buy initiated at 2019-02-28 price is478.1500 for BHARATFORG
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-03-21
+plotdata.js:390 sideways high is 383.3500
+plotdata.js:391 sideways low at 309.7000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-09
+plotdata.js:389 sideways formed at 2018-03-21
+plotdata.js:390 sideways high is 383.3500
+plotdata.js:391 sideways low at 309.7000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-09
+plotdata.js:389 sideways formed at 2018-03-21
+plotdata.js:390 sideways high is 383.3500
+plotdata.js:391 sideways low at 309.7000
+plotdata.js:392 sideways formed from dateundefined to 2018-02-09
+yearly_bpb.js:240 inside setinterval
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at9
+plotdata.js:389 sideways formed at 2018-07-04
+plotdata.js:390 sideways high is 1650.0000
+plotdata.js:391 sideways low at 1284.5000
+plotdata.js:392 sideways formed from date2018-05-03 to 2018-05-25
+plotdata.js:791 down buy initiated at 2018-10-26 price is1134.5000 for CEATLTD
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at9
+plotdata.js:389 sideways formed at 2018-07-04
+plotdata.js:390 sideways high is 1650.0000
+plotdata.js:391 sideways low at 1284.5000
+plotdata.js:392 sideways formed from date2018-05-03 to 2018-05-25
+plotdata.js:791 down buy initiated at 2018-10-26 price is1134.5000 for CEATLTD
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at9
+plotdata.js:389 sideways formed at 2018-07-04
+plotdata.js:390 sideways high is 1650.0000
+plotdata.js:391 sideways low at 1284.5000
+plotdata.js:392 sideways formed from date2018-05-03 to 2018-05-25
+plotdata.js:791 down buy initiated at 2018-10-26 price is1134.5000 for CEATLTD
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 370.4500
+plotdata.js:391 sideways low at 320.8000
+plotdata.js:392 sideways formed from date2017-08-02 to 2017-08-16
+plotdata.js:630 up black extreme is2017-10-27
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 370.4500
+plotdata.js:391 sideways low at 320.8000
+plotdata.js:392 sideways formed from date2017-08-02 to 2017-08-16
+plotdata.js:630 up black extreme is2017-10-27
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 370.4500
+plotdata.js:391 sideways low at 320.8000
+plotdata.js:392 sideways formed from date2017-08-02 to 2017-08-16
+plotdata.js:630 up black extreme is2017-10-27
+yearly_bpb.js:240 inside setinterval
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at6
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 468.3500
+plotdata.js:391 sideways low at 358.5000
+plotdata.js:392 sideways formed from date2017-07-26 to 2017-08-14
+plotdata.js:791 down buy initiated at 2018-03-28 price is339.1500 for TATAMOTORS
+plotdata.js:389 sideways formed at 2018-08-14
+plotdata.js:390 sideways high is 315.5500
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-06-22 to 2018-07-06
+plotdata.js:791 down buy initiated at 2018-12-12 price is166.8500 for TATAMOTORS
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at6
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 468.3500
+plotdata.js:391 sideways low at 358.5000
+plotdata.js:392 sideways formed from date2017-07-26 to 2017-08-14
+plotdata.js:791 down buy initiated at 2018-03-28 price is339.1500 for TATAMOTORS
+plotdata.js:389 sideways formed at 2018-08-14
+plotdata.js:390 sideways high is 315.5500
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-06-22 to 2018-07-06
+plotdata.js:791 down buy initiated at 2018-12-12 price is166.8500 for TATAMOTORS
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at6
+plotdata.js:389 sideways formed at 2017-09-12
+plotdata.js:390 sideways high is 468.3500
+plotdata.js:391 sideways low at 358.5000
+plotdata.js:392 sideways formed from date2017-07-26 to 2017-08-14
+plotdata.js:791 down buy initiated at 2018-03-28 price is339.1500 for TATAMOTORS
+plotdata.js:389 sideways formed at 2018-08-14
+plotdata.js:390 sideways high is 315.5500
+plotdata.js:391 sideways low at 252.5500
+plotdata.js:392 sideways formed from date2018-06-22 to 2018-07-06
+plotdata.js:791 down buy initiated at 2018-12-12 price is166.8500 for TATAMOTORS
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-06-01
+plotdata.js:390 sideways high is 502.3670
+plotdata.js:391 sideways low at 421.6670
+plotdata.js:392 sideways formed from dateundefined to 2017-05-05
+plotdata.js:630 up black extreme is2017-08-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-09-07 PRICE IS 513.3500
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-28 PRICE IS 517.7000
+plotdata.js:389 sideways formed at 2017-06-01
+plotdata.js:390 sideways high is 502.3670
+plotdata.js:391 sideways low at 421.6670
+plotdata.js:392 sideways formed from dateundefined to 2017-05-05
+plotdata.js:630 up black extreme is2017-08-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-09-07 PRICE IS 513.3500
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-28 PRICE IS 517.7000
+plotdata.js:389 sideways formed at 2017-06-01
+plotdata.js:390 sideways high is 502.3670
+plotdata.js:391 sideways low at 421.6670
+plotdata.js:392 sideways formed from dateundefined to 2017-05-05
+plotdata.js:630 up black extreme is2017-08-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-09-07 PRICE IS 513.3500
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-28 PRICE IS 517.7000
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-06-08
+plotdata.js:390 sideways high is 209.6000
+plotdata.js:391 sideways low at 189.0000
+plotdata.js:392 sideways formed from date2018-02-09 to 2018-04-23
+plotdata.js:389 sideways formed at 2018-06-08
+plotdata.js:390 sideways high is 209.6000
+plotdata.js:391 sideways low at 189.0000
+plotdata.js:392 sideways formed from date2018-02-09 to 2018-04-23
+plotdata.js:389 sideways formed at 2018-06-08
+plotdata.js:390 sideways high is 209.6000
+plotdata.js:391 sideways low at 189.0000
+plotdata.js:392 sideways formed from date2018-02-09 to 2018-04-23
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-09-04
+plotdata.js:390 sideways high is 194.7500
+plotdata.js:391 sideways low at 155.2000
+plotdata.js:392 sideways formed from date2017-05-04 to 2017-07-03
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-29 PRICE IS 204.8000
+plotdata.js:791 down buy initiated at 2018-10-10 price is152.9500 for ONGC
+plotdata.js:389 sideways formed at 2018-12-27
+plotdata.js:390 sideways high is 165.0000
+plotdata.js:391 sideways low at 137.6500
+plotdata.js:392 sideways formed from date2018-11-15 to 2018-12-04
+plotdata.js:389 sideways formed at 2017-09-04
+plotdata.js:390 sideways high is 194.7500
+plotdata.js:391 sideways low at 155.2000
+plotdata.js:392 sideways formed from date2017-05-04 to 2017-07-03
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-29 PRICE IS 204.8000
+plotdata.js:791 down buy initiated at 2018-10-10 price is152.9500 for ONGC
+plotdata.js:389 sideways formed at 2018-12-27
+plotdata.js:390 sideways high is 165.0000
+plotdata.js:391 sideways low at 137.6500
+plotdata.js:392 sideways formed from date2018-11-15 to 2018-12-04
+plotdata.js:389 sideways formed at 2017-09-04
+plotdata.js:390 sideways high is 194.7500
+plotdata.js:391 sideways low at 155.2000
+plotdata.js:392 sideways formed from date2017-05-04 to 2017-07-03
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-29 PRICE IS 204.8000
+plotdata.js:791 down buy initiated at 2018-10-10 price is152.9500 for ONGC
+plotdata.js:389 sideways formed at 2018-12-27
+plotdata.js:390 sideways high is 165.0000
+plotdata.js:391 sideways low at 137.6500
+plotdata.js:392 sideways formed from date2018-11-15 to 2018-12-04
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-09-28
+plotdata.js:390 sideways high is 230.8000
+plotdata.js:391 sideways low at 201.4000
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-09-05
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-13 PRICE IS 248.2330
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-03 PRICE IS 250.2330
+2plotdata.js:571 bibiiiiii
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-09-28
+plotdata.js:390 sideways high is 230.8000
+plotdata.js:391 sideways low at 201.4000
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-09-05
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-13 PRICE IS 248.2330
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-03 PRICE IS 250.2330
+2plotdata.js:571 bibiiiiii
+plotdata.js:389 sideways formed at 2017-09-28
+plotdata.js:390 sideways high is 230.8000
+plotdata.js:391 sideways low at 201.4000
+plotdata.js:392 sideways formed from date2017-08-09 to 2017-09-05
+plotdata.js:630 up black extreme is2017-11-08
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2017-12-13 PRICE IS 248.2330
+plotdata.js:571 bibiiiiii
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-01-03 PRICE IS 250.2330
+2plotdata.js:571 bibiiiiii
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-06-05
+plotdata.js:390 sideways high is 1471.3500
+plotdata.js:391 sideways low at 1280.0000
+plotdata.js:392 sideways formed from date2017-04-20 to 2017-05-11
+plotdata.js:630 up black extreme is2018-07-04
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-07-12 PRICE IS 972.1500
+plotdata.js:571 bibiiiiii
+plotdata.js:389 sideways formed at 2019-02-20
+plotdata.js:390 sideways high is 995.0000
+plotdata.js:391 sideways low at 901.1000
+plotdata.js:392 sideways formed from date2018-11-20 to 2018-11-29
+plotdata.js:389 sideways formed at 2017-06-05
+plotdata.js:390 sideways high is 1471.3500
+plotdata.js:391 sideways low at 1280.0000
+plotdata.js:392 sideways formed from date2017-04-20 to 2017-05-11
+plotdata.js:630 up black extreme is2018-07-04
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-07-12 PRICE IS 972.1500
+plotdata.js:571 bibiiiiii
+plotdata.js:389 sideways formed at 2019-02-20
+plotdata.js:390 sideways high is 995.0000
+plotdata.js:391 sideways low at 901.1000
+plotdata.js:392 sideways formed from date2018-11-20 to 2018-11-29
+plotdata.js:389 sideways formed at 2017-06-05
+plotdata.js:390 sideways high is 1471.3500
+plotdata.js:391 sideways low at 1280.0000
+plotdata.js:392 sideways formed from date2017-04-20 to 2017-05-11
+plotdata.js:630 up black extreme is2018-07-04
+plotdata.js:543 miniiiiiiiiiii
+plotdata.js:559 BPB short at  crude2018-07-12 PRICE IS 972.1500
+plotdata.js:571 bibiiiiii
+plotdata.js:389 sideways formed at 2019-02-20
+plotdata.js:390 sideways high is 995.0000
+plotdata.js:391 sideways low at 901.1000
+plotdata.js:392 sideways formed from date2018-11-20 to 2018-11-29
+3yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2017-08-18
+plotdata.js:390 sideways high is 313.6000
+plotdata.js:391 sideways low at 296.6000
+plotdata.js:392 sideways formed from date2017-07-19 to 2017-07-31
+plotdata.js:630 up black extreme is2017-09-01
+plotdata.js:601 time to empty the sideways on2017-10-16
+plotdata.js:389 sideways formed at 2017-11-16
+plotdata.js:390 sideways high is 360.8500
+plotdata.js:391 sideways low at 328.3000
+plotdata.js:392 sideways formed from date2017-10-03 to 2017-10-16
+plotdata.js:630 up black extreme is2018-01-16
+plotdata.js:601 time to empty the sideways on2018-05-04
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at29
+plotdata.js:389 sideways formed at 2018-07-27
+plotdata.js:390 sideways high is 390.0500
+plotdata.js:391 sideways low at 369.4000
+plotdata.js:392 sideways formed from date2018-06-14 to 2018-07-10
+plotdata.js:630 up black extreme is2018-08-10
+plotdata.js:601 time to empty the sideways on2018-08-31
+plotdata.js:389 sideways formed at 2018-12-10
+plotdata.js:390 sideways high is 475.1500
+plotdata.js:391 sideways low at 383.8000
+plotdata.js:392 sideways formed from date2018-09-21 to 2018-10-16
+plotdata.js:389 sideways formed at 2017-08-18
+plotdata.js:390 sideways high is 313.6000
+plotdata.js:391 sideways low at 296.6000
+plotdata.js:392 sideways formed from date2017-07-19 to 2017-07-31
+plotdata.js:630 up black extreme is2017-09-01
+plotdata.js:601 time to empty the sideways on2017-10-16
+plotdata.js:389 sideways formed at 2017-11-16
+plotdata.js:390 sideways high is 360.8500
+plotdata.js:391 sideways low at 328.3000
+plotdata.js:392 sideways formed from date2017-10-03 to 2017-10-16
+plotdata.js:630 up black extreme is2018-01-16
+plotdata.js:601 time to empty the sideways on2018-05-04
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at29
+plotdata.js:389 sideways formed at 2018-07-27
+plotdata.js:390 sideways high is 390.0500
+plotdata.js:391 sideways low at 369.4000
+plotdata.js:392 sideways formed from date2018-06-14 to 2018-07-10
+plotdata.js:630 up black extreme is2018-08-10
+plotdata.js:601 time to empty the sideways on2018-08-31
+plotdata.js:389 sideways formed at 2018-12-10
+plotdata.js:390 sideways high is 475.1500
+plotdata.js:391 sideways low at 383.8000
+plotdata.js:392 sideways formed from date2018-09-21 to 2018-10-16
+plotdata.js:389 sideways formed at 2017-08-18
+plotdata.js:390 sideways high is 313.6000
+plotdata.js:391 sideways low at 296.6000
+plotdata.js:392 sideways formed from date2017-07-19 to 2017-07-31
+plotdata.js:630 up black extreme is2017-09-01
+plotdata.js:601 time to empty the sideways on2017-10-16
+plotdata.js:389 sideways formed at 2017-11-16
+plotdata.js:390 sideways high is 360.8500
+plotdata.js:391 sideways low at 328.3000
+plotdata.js:392 sideways formed from date2017-10-03 to 2017-10-16
+plotdata.js:630 up black extreme is2018-01-16
+plotdata.js:601 time to empty the sideways on2018-05-04
+plotdata.js:899 bonuuuuuuuuuuuuuuuuuuu
+plotdata.js:940 sideways formation nullifies at29
+plotdata.js:389 sideways formed at 2018-07-27
+plotdata.js:390 sideways high is 390.0500
+plotdata.js:391 sideways low at 369.4000
+plotdata.js:392 sideways formed from date2018-06-14 to 2018-07-10
+plotdata.js:630 up black extreme is2018-08-10
+plotdata.js:601 time to empty the sideways on2018-08-31
+plotdata.js:389 sideways formed at 2018-12-10
+plotdata.js:390 sideways high is 475.1500
+plotdata.js:391 sideways low at 383.8000
+plotdata.js:392 sideways formed from date2018-09-21 to 2018-10-16
+yearly_bpb.js:240 inside setinterval
+plotdata.js:389 sideways formed at 2018-08-09
+plotdata.js:390 sideways high is 303.4500
+plotdata.js:391 sideways low at 264.6000
+plotdata.js:392 sideways formed from date2018-05-23 to 2018-06-11
+plotdata.js:389 sideways formed at 2018-08-09
+plotdata.js:390 sideways high is 303.4500
+plotdata.js:391 sideways low at 264.6000
+plotdata.js:392 sideways formed from date2018-05-23 to 2018-06-11
+plotdata.js:389 sideways formed at 2018-08-09
+plotdata.js:390 sideways high is 303.4500
+plotdata.js:391 sideways low at 264.6000
+plotdata.js:392 sideways formed from date2018-05-23 to 2018-06-11
