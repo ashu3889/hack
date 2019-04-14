@@ -627,7 +627,7 @@ export default function(state = [], action) {
 
                          else if(state[statelen-1].upretesthappen == true && parseInt(parseInt(action.payload.y)) > parseInt(state[statelen-1].UPblackpoint)){
                                  //  
-                                  console.log('bibiiiiii');
+                             
 
                                 if(Math.abs(action.payload.currentPrice-state[statelen-1].UPblackpoint) >= upDiffFactor ){
 
@@ -869,11 +869,11 @@ export default function(state = [], action) {
                                var priceDiffRatio = priceDiff/action.payload.currentPrice;
 
                                
-
-                               if(priceDiffRatio <= permissibleRiskRatio){
+//solomon.murugan@wipro.com
+                              // if(priceDiffRatio <= permissibleRiskRatio){
 
                                      // ; 
-                                      //debugger;
+                                     // debugger;
                                       console.log('down buy initiated at ' + action.payload.date + ' price is' + action.payload.currentPrice + ' for ' + action.payload.name);
                                       action.payload.downretesthappen = true;
                                       action.payload.highest = state[statelen-1].highest;                    
@@ -884,7 +884,7 @@ export default function(state = [], action) {
                                       //action.payload.TradeTime=  now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();;
                                       let newstate = state.concat(action.payload);
                                       return newstate ;
-                              }
+                             // }
                           }
                             
                       } 
@@ -1052,7 +1052,7 @@ export default function(state = [], action) {
                     }
                     else{
                      
-                      console.log('sideways formation nullifies at' + action.payload.x);
+                      console.log('sideways formation nullifies at' + action.payload.date);
                       action.payload.downcount = 0; 
                       action.payload.upcount = 0; 
                       action.payload.sidecount = 0; 

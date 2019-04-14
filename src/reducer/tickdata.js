@@ -15,11 +15,7 @@ export default function(state = [], action) {
          const now = new Date();
          let shift = action.payload.shift;
 
-         /*if(action.payload.date == "2019-02-14"){
-             
-              debugger ;
-         }*/
-
+         
     
     
 
@@ -44,11 +40,31 @@ export default function(state = [], action) {
 
 
             //new1
+
+            if(action.payload.date == "2019-01-07"){
+             
+                                   debugger ;
+             }
             
           if(state[state.length-1].high < parseFloat(action.payload.high) ){
                 //up direction
                  if(action.payload.tickType == "green" || action.payload.tickType == "doji"){
-                        direction ='up';
+                        
+                        
+                         /* if(action.payload.date == "2018-10-10"){
+             
+                                   debugger ;
+                          }*/
+
+
+                          if(parseFloat(action.payload.low) < parseFloat(state[state.length-1].low) &&  state[state.length-1].tickType == "red"){
+                                direction ='down';
+                          }
+                          else{
+                               direction ='up';
+                           }
+
+
                  }
                  else if(action.payload.tickType == "red"){
                           if(parseFloat(action.payload.close) < state[state.length-1].close){
@@ -79,11 +95,25 @@ export default function(state = [], action) {
                    direction ='down';
             }
             else if(parseFloat(state[state.length-1].high) == parseFloat(action.payload.high)){
-               return state;
+
+                if(parseFloat(state[state.length-1].low) > parseFloat(action.payload.low)){
+                            
+                             if(action.payload.tickType == "red"){
+                                  direction = "down"
+                             }
+                }
+                else{
+                     return state;
+                }
+               
             }
 
 
             //new1
+           
+         
+           
+
 
 
 
@@ -215,6 +245,7 @@ export default function(state = [], action) {
                          if(direction == "down"){
                             //;
 
+
                             
                          
                             action.payload.trend = "downtrend";
@@ -240,21 +271,97 @@ export default function(state = [], action) {
                          } 
                          else if(direction == "up"){
 
-                            
-                         
-                            action.payload.trend = "upward";
-                            action.payload.pivot = state[state.length-2].low; 
-                            action.payload.dir = 'low'; 
-                            action.payload.currentPrice = parseFloat(action.payload.close) ;
 
-                            
-                           
-                            //new code data
-                            action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
-                            action.payload.x = state.length+1;
-                            action.payload.direction = direction;
-                            var newstate = state.concat(action.payload);                
-                            return newstate ;
+                          
+
+                          console.log('action.payload.date ' + action.payload.date);
+
+                          var goAhead = true;
+                          var triggerGoAhead = true;
+                          var triggerCloseGoAhead = true;
+                          var prevPivotGoAhead = true;
+
+                          var prevPivotType = state[state.length-3].tickType;
+                          var pivotType = state[state.length-2].tickType;
+                          var signalType= state[state.length-1].tickType;
+                          var triggerType = action.payload.tickType;
+
+                          var prevPivotBodyHigh = state[state.length-3].high;
+                          var prevPivotBodyLow = state[state.length-3].low ;
+
+                          var pivotBodyOpen = state[state.length-2].open;
+                          var pivotBodyClose = state[state.length-2].close ;
+
+                          var pivotBodyHigh = state[state.length-2].high;
+                          var pivotBodyLow = state[state.length-2].low ;
+
+                          var signalBodyOpen = state[state.length-1].open;
+                          var signalBodyClose = state[state.length-1].close ;
+
+                          var triggerBodyOpen = action.payload.open;
+                          var triggerBodyClose = action.payload.close;
+
+                          var triggerBodyHigh = action.payload.high;
+                          var triggerBodyLow = action.payload.low ;
+
+                          //HINDCOMPOS
+                          if(prevPivotType == "red" && pivotType =="red" && signalType == "red" && triggerType =="green"){
+                               if( parseFloat(prevPivotBodyHigh) >= parseFloat(triggerBodyHigh)){
+                                      prevPivotGoAhead = false;
+                               }
+
+                          }
+
+                          if(triggerType == "red"){
+
+                                if(parseFloat(pivotBodyOpen) >= parseFloat(signalBodyOpen) && parseFloat(pivotBodyOpen) >= parseFloat(triggerBodyOpen)){
+                                     goAhead = false;
+                                }
+                          }
+
+                          
+ 
+                          //genesys condition
+                         if(pivotType =="green" && signalType == "red" && triggerType =="red"){
+                              if(parseFloat(pivotBodyHigh) >= parseFloat(triggerBodyOpen)){
+                                   triggerGoAhead = false;
+                              }
+                          }
+
+                          if(action.payload.low  >  state[state.length-2].low){
+
+                            if(triggerType == "red"){
+                                  if(parseFloat(triggerBodyOpen) >=  parseFloat(state[state.length-2].open) &&  parseFloat(triggerBodyClose) >=  parseFloat(state[state.length-2].open)){
+                                      triggerCloseGoAhead = true;
+                                  }
+                                  else{
+                                       triggerCloseGoAhead = false;
+                                  }
+                            }
+
+                          }
+
+
+                          if(prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true){
+
+                                        if(state[state.length-1].low  <= state[state.length-2].low ){
+                                          action.payload.pivot = state[state.length-1].low; 
+                                        }
+                                        else{
+                                          action.payload.pivot = state[state.length-2].low; 
+                                        }
+                                    
+                                        action.payload.trend = "upward";
+                                       
+                                        action.payload.dir = 'low'; 
+                                        action.payload.currentPrice = parseFloat(action.payload.close) ;
+                                        //new code data
+                                        action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
+                                        action.payload.x = state.length+1;
+                                        action.payload.direction = direction;
+                                        var newstate = state.concat(action.payload);                
+                                        return newstate ;
+                            }
 
 
                              //new code data
