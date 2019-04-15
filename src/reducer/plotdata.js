@@ -50,9 +50,9 @@ export default function(state = [], action) {
 
    // console.log('bonaaaaa');
 
-    
+    var minimumDays = 7;
 
-
+    var ratioPermitted = 1.1;
 
     let dayRetestDiff = 0.002*factor;
     let sidewaysClearDiff = 0.00175*factor;
@@ -627,7 +627,7 @@ export default function(state = [], action) {
 
                          else if(state[statelen-1].upretesthappen == true && parseInt(parseInt(action.payload.y)) > parseInt(state[statelen-1].UPblackpoint)){
                                  //  
-                             
+
 
                                 if(Math.abs(action.payload.currentPrice-state[statelen-1].UPblackpoint) >= upDiffFactor ){
 
@@ -866,14 +866,25 @@ export default function(state = [], action) {
                               
                                var priceDiff = Math.abs(state[statelen-1].lowest - action.payload.currentPrice);
 
+
+                               var newPriceDiff = Math.abs(action.payload.currentPrice - action.payload.y);
+
                                var priceDiffRatio = priceDiff/action.payload.currentPrice;
+
+                               var date1 = new Date(action.payload.date);
+                               var date2 = new Date(action.payload.pivotDate);
+                               var diffTime = Math.abs(date2.getTime() - date1.getTime());
+                               var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
                                
 //solomon.murugan@wipro.com
                               // if(priceDiffRatio <= permissibleRiskRatio){
+                               //  debugger;
+                                // console.log('priceDiffRatio. ' + parseFloat(newPriceDiff/action.payload.y));
 
-                                     // ; 
-                                     // debugger;
+                                if(diffDays <= minimumDays){
+
+
                                       console.log('down buy initiated at ' + action.payload.date + ' price is' + action.payload.currentPrice + ' for ' + action.payload.name);
                                       action.payload.downretesthappen = true;
                                       action.payload.highest = state[statelen-1].highest;                    
@@ -884,6 +895,11 @@ export default function(state = [], action) {
                                       //action.payload.TradeTime=  now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();;
                                       let newstate = state.concat(action.payload);
                                       return newstate ;
+
+                                }
+
+                                     // ; 
+                                     
                              // }
                           }
                             
