@@ -22,6 +22,44 @@ export default function(state = [], action) {
 
         
         if(length >= 1 ){
+
+
+                if(state[state.length-1].hasTradeStarted != undefined && state[state.length-1].hasTradeStarted != false){
+                    action.payload.detectionCount = state[state.length-1].detectionCount;
+                } 
+
+                 if(state[state.length-1].detectionCount != undefined){
+                  action.payload.detectionCount = state[state.length-1].detectionCount;
+                } 
+
+
+                if(state[state.length-1].detectionCandle != undefined){
+                  action.payload.detectionCandle = state[state.length-1].detectionCandle;
+                } 
+
+
+
+
+                if(action.payload.hasTradeStarted != undefined && action.payload.hasTradeStarted  != false){
+                   
+                     if(action.payload.detectionCount == undefined){
+
+                        action.payload.detectionCount = 1;
+                        var data ={'date':action.payload.date ,'type': action.payload.tickType};
+                        action.payload.detectionCandle = [action.payload.tickType];
+                     }
+                     else{
+
+                       //console.log('action.payload.date ' + action.payload.date);
+                       action.payload.detectionCount =  action.payload.detectionCount +1;
+                       var data ={'date':action.payload.date ,'type': action.payload.tickType};
+
+                      
+                       action.payload.detectionCandle =  action.payload.detectionCandle.concat(data);
+                        
+                     }
+                }
+
           // check the direction and add it in candle
 
           //
@@ -41,10 +79,10 @@ export default function(state = [], action) {
 
             //new1
 
-            if(action.payload.date == "2019-01-07"){
+          /*  if(action.payload.date == "2019-01-07"){
              
                                    debugger ;
-             }
+             }*/
             
           if(state[state.length-1].high < parseFloat(action.payload.high) ){
                 //up direction
@@ -258,6 +296,8 @@ export default function(state = [], action) {
                             action.payload.x = state.length+1;
                             action.payload.direction = direction;
 
+                            action.payload.pivotDate = state[state.length-2].date; 
+
 
 
                             var newstate = state.concat(action.payload);                
@@ -274,7 +314,7 @@ export default function(state = [], action) {
 
                           
 
-                          console.log('action.payload.date ' + action.payload.date);
+                          //console.log('action.payload.date ' + action.payload.date);
 
                           var goAhead = true;
                           var triggerGoAhead = true;
@@ -359,6 +399,9 @@ export default function(state = [], action) {
                                         action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
                                         action.payload.x = state.length+1;
                                         action.payload.direction = direction;
+
+
+                                        action.payload.pivotDate = state[state.length-2].date; 
                                         var newstate = state.concat(action.payload);                
                                         return newstate ;
                             }
@@ -391,6 +434,8 @@ export default function(state = [], action) {
                                        action.payload.x = newstatedata.length+1;
                                        action.payload.direction = direction;
                                        action.payload.y = parseFloat(action.payload.high);
+                                       action.payload.pivotDate = state[state.length-2].date;
+
                                        let newstate1 = newstatedata.concat(action.payload);                
                                        return newstate1 ;
                                    }
@@ -412,6 +457,9 @@ export default function(state = [], action) {
                                        action.payload.x = newstatedata.length+1;
                                        action.payload.y = parseFloat(action.payload.low);
                                        action.payload.direction = direction;
+
+                                       action.payload.pivotDate = state[state.length-2].date;
+
                                        let newstate1 = newstatedata.concat(action.payload);                
                                        return newstate1 ;
                                     }
