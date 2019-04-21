@@ -38,6 +38,11 @@ export default function(state = [], action) {
                 } 
 
 
+                if(state[state.length-1].downPivotNotFormed != undefined){
+                  action.payload.downPivotNotFormed = state[state.length-1].downPivotNotFormed;
+                } 
+
+
 
 
                 if(action.payload.hasTradeStarted != undefined && action.payload.hasTradeStarted  != false){
@@ -282,26 +287,35 @@ export default function(state = [], action) {
 
                          if(direction == "down"){
                             //;
+                           // console.log('action.payload.date ' + action.payload.date);
+                           var weakPivot = false;
 
+                         
+                                  //condition to avaoid unnnecessay pivot weak pivots
+                               /* if(action.payload.close < state[state.length-2].high &&  state[state.length-1].close < state[state.length-2].high){
+                                     weakPivot = true;
+                                }*/
 
                             
-                         
+
+                          if(action.payload.downPivotNotFormed != true || action.payload.downPivotNotFormed != undefined && weakPivot ==false){
+                            // console.log('action.payload.date ' + action.payload.date);
                             action.payload.trend = "downtrend";
                             action.payload.pivot =   parseFloat(state[state.length-2].high); 
                             action.payload.dir = 'up'; 
                             action.payload.currentPrice = parseFloat(action.payload.close) ;
-                           
-                           //new code data
                             action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
                             action.payload.x = state.length+1;
                             action.payload.direction = direction;
-
                             action.payload.pivotDate = state[state.length-2].date; 
-
-
-
                             var newstate = state.concat(action.payload);                
                             return newstate ;
+
+                          }
+
+                            
+                         
+                       
 
                             //return  state.slice();
 
@@ -320,6 +334,7 @@ export default function(state = [], action) {
                           var triggerGoAhead = true;
                           var triggerCloseGoAhead = true;
                           var prevPivotGoAhead = true;
+                          var weakPivot = false;
 
                           var prevPivotType = state[state.length-3].tickType;
                           var pivotType = state[state.length-2].tickType;
@@ -381,8 +396,16 @@ export default function(state = [], action) {
 
                           }
 
+                        
 
-                          if(prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true){
+                          if(action.payload.close < state[state.length-2].high &&  state[state.length-1].close < state[state.length-2].high){
+                                     weakPivot = true;
+                          }
+
+                          
+
+
+                          if(prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true && weakPivot == false){
 
                                         if(state[state.length-1].low  <= state[state.length-2].low ){
                                           action.payload.pivot = state[state.length-1].low; 
@@ -400,10 +423,20 @@ export default function(state = [], action) {
                                         action.payload.x = state.length+1;
                                         action.payload.direction = direction;
 
+                                        action.payload.downPivotNotFormed = false;
+
 
                                         action.payload.pivotDate = state[state.length-2].date; 
                                         var newstate = state.concat(action.payload);                
                                         return newstate ;
+                            }
+                            else{
+                               action.payload.downPivotNotFormed = true;
+                               var newstate = state.concat(action.payload);
+                               return newstate;
+
+
+
                             }
 
 
@@ -457,6 +490,7 @@ export default function(state = [], action) {
                                        action.payload.x = newstatedata.length+1;
                                        action.payload.y = parseFloat(action.payload.low);
                                        action.payload.direction = direction;
+                                       action.payload.downPivotNotFormed = false;
 
                                        action.payload.pivotDate = state[state.length-2].date;
 
