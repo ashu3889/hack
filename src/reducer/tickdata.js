@@ -287,31 +287,42 @@ export default function(state = [], action) {
 
                          if(direction == "down"){
                             //;
-                           // console.log('action.payload.date ' + action.payload.date);
-                           var weakPivot = false;
+                           // console.log('action.payload.date  down is ' + action.payload.date);
+                            var weakPivot = false;
+                            // 2018-04-25
+                            //2018-05-02
+
+                          
+                          
 
                          
                                   //condition to avaoid unnnecessay pivot weak pivots
-                               /* if(action.payload.close < state[state.length-2].high &&  state[state.length-1].close < state[state.length-2].high){
+                            /*  if(action.payload.close < state[state.length-2].high &&  state[state.length-1].close < state[state.length-2].high){
                                      weakPivot = true;
-                                }*/
+                              }*/
 
                             
 
-                          if(action.payload.downPivotNotFormed != true || action.payload.downPivotNotFormed != undefined && weakPivot ==false){
+                          if((action.payload.downPivotNotFormed != true || action.payload.downPivotNotFormed != undefined) && weakPivot ==false){
                             // console.log('action.payload.date ' + action.payload.date);
-                            action.payload.trend = "downtrend";
-                            action.payload.pivot =   parseFloat(state[state.length-2].high); 
-                            action.payload.dir = 'up'; 
-                            action.payload.currentPrice = parseFloat(action.payload.close) ;
-                            action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
-                            action.payload.x = state.length+1;
-                            action.payload.direction = direction;
-                            action.payload.pivotDate = state[state.length-2].date; 
-                            var newstate = state.concat(action.payload);                
-                            return newstate ;
+                                action.payload.trend = "downtrend";
+                                action.payload.pivot =   parseFloat(state[state.length-2].high); 
+                                action.payload.dir = 'up'; 
+                                action.payload.currentPrice = parseFloat(action.payload.close) ;
+                                action.payload.time = now.getHours().toString()   + now.getMinutes().toString() + now.getSeconds().toString();
+                                action.payload.x = state.length+1;
+                                action.payload.direction = direction;
+                                action.payload.pivotDate = state[state.length-2].date; 
+                                action.payload.upPivotNotFormed = false;
+                                var newstate = state.concat(action.payload);                
+                                return newstate ;
 
-                          }
+                          } 
+                          else{
+                               action.payload.upPivotNotFormed = true;
+                               var newstate = state.concat(action.payload);
+                               return newstate;
+                            }
 
                             
                          
@@ -328,7 +339,7 @@ export default function(state = [], action) {
 
                           
 
-                          //console.log('action.payload.date ' + action.payload.date);
+                         // console.log('action.payload.date UP  ' + action.payload.date);
 
                           var goAhead = true;
                           var triggerGoAhead = true;
@@ -402,10 +413,16 @@ export default function(state = [], action) {
                                      weakPivot = true;
                           }
 
+
+                            if(action.payload.date == "2018-10-29"){
+                                   debugger;
+                            }
+
+
                           
 
 
-                          if(prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true && weakPivot == false){
+                          if((action.payload.upPivotNotFormed != true || action.payload.upPivotNotFormed != undefined) &&  prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true && weakPivot == false){
 
                                         if(state[state.length-1].low  <= state[state.length-2].low ){
                                           action.payload.pivot = state[state.length-1].low; 
@@ -434,9 +451,6 @@ export default function(state = [], action) {
                                action.payload.downPivotNotFormed = true;
                                var newstate = state.concat(action.payload);
                                return newstate;
-
-
-
                             }
 
 
@@ -468,6 +482,7 @@ export default function(state = [], action) {
                                        action.payload.direction = direction;
                                        action.payload.y = parseFloat(action.payload.high);
                                        action.payload.pivotDate = state[state.length-2].date;
+                                       action.payload.upPivotNotFormed = false;
 
                                        let newstate1 = newstatedata.concat(action.payload);                
                                        return newstate1 ;

@@ -9,6 +9,8 @@
 
 		import YearlyBPB from './yearly_bpb.js';
 
+		import FinalYearlyBPB from './final_yearly_bpb.js';
+
 		
 		
 		import DojiLogin from './dojiLogin.js';
@@ -28,6 +30,8 @@
                      <Route exact path='/test' component={TestLoginNav}/>
                      <Route exact path='/doji' component={DojiLogin}/>
                       <Route exact path='/stest' component={YearlyBPB}/>
+                      <Route exact path='/ftest' component={FinalYearlyBPB}/>
+                      
 
                       <Route exact path='/btest' component={TestBLoginNav}/>
 
