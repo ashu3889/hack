@@ -1,6 +1,5 @@
 
 import _ from "lodash";
-//GSKCONS
 
 export default function(state = [], action) {
  
@@ -21,10 +20,11 @@ export default function(state = [], action) {
     }
     else{
        var retestDiff = 10;
+
     }
 
-     if(parseInt(action.payload.y) >= 500){
-     var lowDiffFactor = 10;
+    if(parseInt(action.payload.y) >= 500){
+        var lowDiffFactor = 10;
     }
     else{
        var lowDiffFactor = 3;
@@ -51,7 +51,7 @@ export default function(state = [], action) {
 
    // console.log('bonaaaaa');
 
-    var minimumDays = 7;
+    var minimumDays = 9;
 
     var ratioPermitted = 1.1;
 
@@ -441,6 +441,10 @@ export default function(state = [], action) {
                        action.payload.downcount = state[statelen-1].downcount;
                 } 
 
+                 if(state[statelen-1].sidewaysFormationDate != undefined){
+                  action.payload.sidewaysFormationDate = state[statelen-1].sidewaysFormationDate;
+                } 
+
                   if(state[statelen-1].sidecount ==4){
                      let high = state[statelen-1].highest;
                      let low = state[statelen-1].lowest;
@@ -448,8 +452,13 @@ export default function(state = [], action) {
                      console.log('sideways high is ' + high);
                      console.log('sideways low at ' + low);
                      console.log('sideways formed from date' + state[statelen-6].date + ' to ' + state[statelen-5].date);
+                     action.payload.sidewaysFormationDate =  state[statelen-5].date;
                      //
                   }
+
+                  
+
+               
 
 
                 if(state[statelen-1].highest != undefined){
@@ -660,7 +669,7 @@ export default function(state = [], action) {
                            else if(diff > retestDiff && state[statelen-1].upretesthappen !== true && parseInt(parseInt(action.payload.y)) > parseInt(state[statelen-1].UPblackpoint)){
                                  //  
                                   console.log('time to empty the sideways on' + action.payload.date);
-
+                                  
                                   action.payload.downcount = 0; 
                                   action.payload.upcount = 0; 
                                   action.payload.sidecount = 0; 
@@ -796,7 +805,7 @@ export default function(state = [], action) {
 
                              if(action.payload.pivotArray !== undefined){
                                   if( parseInt(action.payload.y) <  _.minBy(action.payload.pivotArray) ){
-                                       //  debugger;
+                                         // ;
 
                                          action.payload.lowblackextreme = parseInt(action.payload.y);
                                          action.payload.Lowblackpoint = parseInt(action.payload.y);
@@ -862,7 +871,7 @@ export default function(state = [], action) {
                             var diff = Math.abs(state[statelen-1].Lowblackpoint-parseInt(action.payload.y));
 
 
-                             //debugger;
+                             //;
                             if( state[statelen-1].LongTradeInitiated != true && state[statelen-1].Lowblackpoint >= parseInt(action.payload.y)  && parseInt(state[statelen-1].lowest) > parseInt(action.payload.currentPrice) && (state[statelen-1].downretesthappen == undefined || state[statelen-1].downretesthappen == false)){
                               
                                var priceDiff = Math.abs(state[statelen-1].lowest - action.payload.currentPrice);
@@ -880,12 +889,15 @@ export default function(state = [], action) {
                                
 //solomon.murugan@wipro.com
                               // if(priceDiffRatio <= permissibleRiskRatio){
-                               //  debugger;
+                                 //  ;
                                 // console.log('priceDiffRatio. ' + parseFloat(newPriceDiff/action.payload.y));
+                               
 
                                 if(diffDays <= minimumDays){
 
+                                      //;
 
+                                      console.log('low black point is..... ' +  state[statelen-1].Lowblackpoint);
                                       console.log('down buy initiated at ' + action.payload.date + ' price is' + action.payload.currentPrice + ' for ' + action.payload.name);
                                       action.payload.downretesthappen = true;
                                       action.payload.highest = state[statelen-1].highest;                    
@@ -1073,7 +1085,7 @@ export default function(state = [], action) {
                       action.payload.downcount = 0; 
                       action.payload.upcount = 0; 
                       action.payload.sidecount = 0; 
-                       action.payload.pivotArray = [];
+                      action.payload.pivotArray = [];
                       action.payload.highest = parseInt(action.payload.y);                    
                       action.payload.lowest = parseInt(state[statelen-1].y);
                       action.payload.upblackextreme = 0;
@@ -1081,6 +1093,7 @@ export default function(state = [], action) {
                       action.payload.UPblackpoint = 0;
                       action.payload.Lowblackpoint = 0;  
                       action.payload.trend = '';
+                      action.payload.sidewaysFormationDate = "";
 
                     }
 
