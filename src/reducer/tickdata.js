@@ -86,7 +86,7 @@ export default function(state = [], action) {
 
           /*  if(action.payload.date == "2019-01-07"){
              
-                                   debugger ;
+                                    ;
              }*/
             
           if(state[state.length-1].high < parseFloat(action.payload.high) ){
@@ -96,7 +96,7 @@ export default function(state = [], action) {
                         
                          /* if(action.payload.date == "2018-10-10"){
              
-                                   debugger ;
+                                    ;
                           }*/
 
 
@@ -287,7 +287,7 @@ export default function(state = [], action) {
 
                          if(direction == "down"){
                             //;
-                           // console.log('action.payload.date  down is ' + action.payload.date);
+                           //console.log('action.payload.date  down is ' + action.payload.date);
                             var weakPivot = false;
                             // 2018-04-25
                             //2018-05-02
@@ -304,7 +304,7 @@ export default function(state = [], action) {
                             
 
                           if((action.payload.downPivotNotFormed != true || action.payload.downPivotNotFormed != undefined) && weakPivot ==false){
-                            // console.log('action.payload.date ' + action.payload.date);
+                                console.log(' up action.payload.date ' + action.payload.date);
                                 action.payload.trend = "downtrend";
                                 action.payload.pivot =   parseFloat(state[state.length-2].high); 
                                 action.payload.dir = 'up'; 
@@ -319,6 +319,7 @@ export default function(state = [], action) {
 
                           } 
                           else{
+
                                action.payload.upPivotNotFormed = true;
                                var newstate = state.concat(action.payload);
                                return newstate;
@@ -339,7 +340,7 @@ export default function(state = [], action) {
 
                           
 
-                         // console.log('action.payload.date UP  ' + action.payload.date);
+                         //console.log('action.payload.date UP  ' + action.payload.date);
 
                           var goAhead = true;
                           var triggerGoAhead = true;
@@ -369,6 +370,9 @@ export default function(state = [], action) {
 
                           var triggerBodyHigh = action.payload.high;
                           var triggerBodyLow = action.payload.low ;
+
+                          var lovelyDiff  = Math.abs(parseFloat(action.payload.low) - parseFloat(state[state.length-2].low));
+                          var lovelyDiffRatio = (lovelyDiff/parseFloat(action.payload.low))*100;
 
                           //HINDCOMPOS
                           if(prevPivotType == "red" && pivotType =="red" && signalType == "red" && triggerType =="green"){
@@ -401,7 +405,14 @@ export default function(state = [], action) {
                                       triggerCloseGoAhead = true;
                                   }
                                   else{
-                                       triggerCloseGoAhead = false;
+
+                                       if(lovelyDiffRatio < 10){
+                                            triggerCloseGoAhead = false;
+                                       }
+                                       else{
+                                             triggerCloseGoAhead = true;
+                                       }
+                                       
                                   }
                             }
 
@@ -410,17 +421,27 @@ export default function(state = [], action) {
                         
 
                           if(action.payload.close < state[state.length-2].high &&  state[state.length-1].close < state[state.length-2].high){
-                                     weakPivot = true;
+                                     
+                                      if(lovelyDiffRatio < 10){
+                                            weakPivot = true;
+                                       }
+                                       else{
+                                            weakPivot = false;
+                                       }
                           }
 
 
-                            if(action.payload.date == "2018-10-29"){
-                                   debugger;
-                            }
-
+                           
 
                           
+                          console.log(' low action.payload.date ' + action.payload.date);
 
+                          if( action.payload.date == "2019-02-15"){
+                                 
+                                  
+                                  // debugger;
+                                                      
+                          }
 
                           if((action.payload.upPivotNotFormed != true || action.payload.upPivotNotFormed != undefined) &&  prevPivotGoAhead == true && triggerGoAhead == true && triggerCloseGoAhead == true && goAhead == true && weakPivot == false){
 
@@ -430,6 +451,8 @@ export default function(state = [], action) {
                                         else{
                                           action.payload.pivot = state[state.length-2].low; 
                                         }
+
+                                         
                                     
                                         action.payload.trend = "upward";
                                        
@@ -448,6 +471,7 @@ export default function(state = [], action) {
                                         return newstate ;
                             }
                             else{
+                               action.payload.direction = direction;
                                action.payload.downPivotNotFormed = true;
                                var newstate = state.concat(action.payload);
                                return newstate;
