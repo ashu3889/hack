@@ -25,7 +25,7 @@
 		    return(
 		       <div>
 		        <Switch>
-                     <Route  path='/login' component={Kitelogin}/>                     
+                     <Route  path='/login' component={FinalYearlyBPB}/>                     
                      <Route exact path='/success/' component={LoginNav}/>
                      <Route exact path='/test' component={TestLoginNav}/>
                      <Route exact path='/doji' component={DojiLogin}/>
